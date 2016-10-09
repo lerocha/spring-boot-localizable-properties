@@ -6,21 +6,19 @@ spring:
   profiles: default
 
 region:
-  locale: en_US
   hostSuffix: .com
   currencyCode: USD
   patternShortDate: MM-dd-YYYY
 
   locales:
-    en_AU:
-      hostSuffix: .com.au
-      currencyCode: AUD
+    en_CA:
+      hostSuffix: .ca
+      currencyCode: CAD
       patternShortDate: dd-MM-YYYY
     en_GB:
       hostSuffix: .co.uk
       currencyCode: GBD
       patternShortDate: dd-MM-YYYY
-
 
 ---
 spring:

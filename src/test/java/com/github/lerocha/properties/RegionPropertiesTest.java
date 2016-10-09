@@ -19,12 +19,14 @@ public class RegionPropertiesTest {
     @Test
     public void fromLocaleShouldReturnDefaultLocaleWhenLocaleNotFound() {
         Assert.assertNotNull(regionProperties);
-        Assert.assertEquals(regionProperties.fromLocale(Locale.CANADA), regionProperties);
+        Assert.assertEquals(regionProperties.fromLocale(Locale.ITALY), regionProperties);
     }
 
     @Test
     public void fromLocaleShouldReturntLocaleWhenLocaleIsFound() {
         Assert.assertNotNull(regionProperties);
-        Assert.assertNotEquals(regionProperties.fromLocale(Locale.UK), regionProperties);
+        Assert.assertEquals(regionProperties.fromLocale(Locale.US).getHostSuffix(), ".com");
+        Assert.assertEquals(regionProperties.fromLocale(Locale.CANADA).getHostSuffix(), ".ca");
+        Assert.assertEquals(regionProperties.fromLocale(Locale.UK).getHostSuffix(), ".co.uk");
     }
 }
