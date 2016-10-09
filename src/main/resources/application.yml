@@ -1,0 +1,17 @@
+spring:
+  profiles.active: default
+
+---
+spring:
+  profiles: default
+
+region:
+  hostSuffix: .com
+  currencyCode: USD
+  patternShortDate: MM-dd-YYYY
+
+
+---
+spring:
+  profiles: production
+
