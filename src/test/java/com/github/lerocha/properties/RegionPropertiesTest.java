@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.Locale;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class RegionPropertiesTest {
@@ -15,8 +17,14 @@ public class RegionPropertiesTest {
     private RegionProperties regionProperties;
 
     @Test
-    public void contextLoads() {
+    public void fromLocaleShouldReturnDefaultLocaleWhenLocaleNotFound() {
         Assert.assertNotNull(regionProperties);
+        Assert.assertEquals(regionProperties.fromLocale(Locale.CANADA), regionProperties);
     }
 
+    @Test
+    public void fromLocaleShouldReturntLocaleWhenLocaleIsFound() {
+        Assert.assertNotNull(regionProperties);
+        Assert.assertNotEquals(regionProperties.fromLocale(Locale.UK), regionProperties);
+    }
 }
