@@ -13,7 +13,7 @@ import java.util.Map;
  */
 @Component
 @ConfigurationPropertiesBinding
-public class LocaleConverter implements Converter<String, Locale> {
+public abstract class LocaleConverter implements Converter<String, Locale> {
 
     private static final Map<String, Locale> LOCALE_MAP = new HashMap<>(Locale.getAvailableLocales().length);
 
