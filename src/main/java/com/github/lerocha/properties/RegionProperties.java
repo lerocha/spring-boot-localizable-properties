@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @ConfigurationProperties(prefix = "region")
-public class RegionProperties extends LocaleProperties<RegionProperties> {
+public class RegionProperties extends LocalizableProperties<RegionProperties> {
     private String hostSuffix;
     private String currencyCode;
     private String patternShortDate;

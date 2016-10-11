@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * Created by lerocha on 10/8/16.
  */
-public class LocaleProperties<T extends LocaleProperties> {
+public abstract class LocalizableProperties<T extends LocalizableProperties> {
     protected Locale locale;
     protected Map<Locale, T> locales = new HashMap<>();
 
